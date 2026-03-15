@@ -34,6 +34,14 @@ Schéma zapojení.
 Pro zkoužku si můžeš půjčit 12V přímo z OBD2 na pinu 16, ale protože je tam trvalé napětí, tak je lepší to zapojit na 12V ze zapalovače. Ten se zapne až po nastartování.
 <img src="schema.png" width="600">
 
-Jak to vypadá u mě.
+Jak to vypadá u mě. Ten microUSB je tam jen kabel, kdybych chtěl software aktualizovat.
 
-<img src="04_bastl.jpg" width="600">
+<img src="bastl.png" width="600">
+
+Nahrání do ESP32.
+1. jako board si nastav NOLOGO ESP32C3 Super mini
+2. stáhni si knihovnu ACAN2515.h od Pierre Molinaro
+3. po vložení INA můžeš nahrávat.
+4. Pokud špatně zapojíš MCP2515 CAN Bus Modul TJA1050 SPI esp32 vůbec nenaběhne.
+5. Když je vše OK tak se připoj na wifi MY_VOLVO a heslo je 12345678
+6. 
