@@ -1,3 +1,107 @@
+Englich version
+# Volvo DPF Indicator
+
+Tutorial on how to build your own DPF indicator for Volvo cars (2009–2016) using ESP32 Super Mini.
+
+## How the DPF indicator works
+
+The DPF indicator reads DPF temperature and soot level.
+
+In the main menu you can configure the LED indicator.  
+For soot level the LED will blink, and for temperature it will stay on.
+
+On my Volvo XC60 (2010) the DPF regeneration starts at around **28.5 g of soot**.  
+The temperature rises from **180°C to about 230–240°C**, which means regeneration has started.
+
+After about **10 minutes of driving**, the soot level drops to **0.0 g**.  
+At that moment the DPF temperature begins to drop back to about **180°C**, which takes roughly **2 minutes**.
+
+I can set the soot warning to **28 g**, and when this level is reached the LED starts blinking.  
+This means regeneration is about to start.
+
+If I set the temperature threshold to **210°C**, the LED turns on when regeneration starts and stays on until the temperature drops below **190°C**.
+
+From my observations, during my daily commute the car produces about **1 g of soot every 60 km**.
+
+The first two screens show the **main menu**.  
+The next two screens show the **phone version**.
+
+<img src="10.png" width="600">
+
+---
+
+# What you will need
+
+## Software
+1. Arduino IDE with required libraries installed.
+
+## Hardware
+1. ESP32 Super Mini  
+2. Adjustable step-down converter **LM2596 DC-DC**  
+   ⚠ Important: Before connecting anything, set the output voltage to **5V** using the trim potentiometer.  
+   Connect the converter to a **12V source first** and adjust it to about **5.05V** while measuring the output voltage.  
+   Otherwise you may damage the components.  
+3. MCP2515 CAN Bus Module TJA1050 SPI  
+4. Diode **1N4148**  
+5. LED diode (choose any color)  
+6. Resistors **10kΩ, 18kΩ** for voltage divider and **320Ω** for the LED  
+7. Universal PCB board **50×70 mm**  
+8. Cable **3×1mm** for GND, CANH, CANL connected to the back of the **OBD2 connector**  
+9. Wire **1mm** for **12V power from cigarette lighter**  
+10. **500 mA fuse** and fuse holder  
+11. **OBD connector** if you want a plug-and-play version
+
+---
+
+# Wiring diagram
+
+For testing you can take **12V directly from OBD2 pin 16**, but since that pin has **constant voltage**, it is better to connect power to **12V from the cigarette lighter**, which turns on only after the engine starts.
+
+<img src="schema.png" width="600">
+
+---
+
+# Example build
+
+This is how my prototype looks.  
+The **microUSB cable** is only used in case I want to update the firmware.
+
+<img src="bastl.png" width="600">
+
+---
+
+# Uploading firmware to ESP32
+
+1. Set board to **NOLOGO ESP32C3 Super Mini**
+2. Install library **ACAN2515.h** by Pierre Molinaro
+3. After opening the `.ino` file you can upload the firmware
+4. If the MCP2515 CAN Bus Module is wired incorrectly, the ESP32 will not boot
+5. When everything is working, connect to WiFi:
+---
+
+# Demo version
+
+The demo version shows **engine RPM and outside temperature**.
+
+If everything works correctly you can download the full version.
+
+<img src="demo.jpg" width="600">
+
+Free demo firmware:
+
+[Download demo .ino](demo.ino)
+
+---
+
+# Full version
+
+Full firmware with complete `.INO` source code is available here:
+
+➡ https://marekverse80.gumroad.com/l/qpyikp
+---
+---
+---
+CZ verze
 # Volvo-DPF-indikátor
 Návod jak si vyrobit vlastní DPF indikátor pro vozy Volvo. 2009 - 2016 přes ESP32 super mini
 
