@@ -44,4 +44,9 @@ Nahrání do ESP32.
 3. po vložení INA můžeš nahrávat.
 4. Pokud špatně zapojíš MCP2515 CAN Bus Modul TJA1050 SPI esp32 vůbec nenaběhne.
 5. Když je vše OK tak se připoj na wifi MY_VOLVO a heslo je 12345678
-6. 
+
+## Demo version
+
+Free demo firmware:
+
+[Download demo .ino](demo.ino)
