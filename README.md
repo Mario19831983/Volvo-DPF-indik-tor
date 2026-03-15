@@ -1,7 +1,7 @@
 # Volvo-DPF-indikátor
 Návod jak si vyrobit vlastní DPF indikátor pro vozy Volvo. 2009 - 2016 přes ESP32 super mini
 
-DPF indikátor funguje tak, že čte teplotu DPF a saze.
+## DPF indikátor funguje tak, že čte teplotu DPF a saze.
 
 V hlavním menu je možnost nastavení LED diody. Pro saze bliká a pro teplotu svítí. 
 
@@ -13,7 +13,7 @@ Vysledoval jsem, že každý den cestou do práce a z práce mi to udělá 1g sa
 První dvě orazovky jsou havní menu. Další dvě obrazovky je phone verze.
 <img src="10.png" width="600">
 
-Co budeme potřebovat.
+## Co budeme potřebovat.
 - Software
 1. Arduino IDE a nainstalované potřebné knihovny.
 
@@ -29,7 +29,7 @@ Co budeme potřebovat.
 9. Pojitku 500mA a pojistkové lůžko.
 10. OBD konektor když chceš verzi plug and play.
 
-Schéma zapojení.
+## Schéma zapojení.
 
 Pro zkoužku si můžeš půjčit 12V přímo z OBD2 na pinu 16, ale protože je tam trvalé napětí, tak je lepší to zapojit na 12V ze zapalovače. Ten se zapne až po nastartování.
 <img src="schema.png" width="600">
@@ -38,15 +38,15 @@ Jak to vypadá u mě. Ten microUSB je tam jen kabel, kdybych chtěl software akt
 
 <img src="bastl.png" width="600">
 
-Nahrání do ESP32.
+## Nahrání do ESP32.
 1. jako board si nastav NOLOGO ESP32C3 Super mini
 2. stáhni si knihovnu ACAN2515.h od Pierre Molinaro
 3. po vložení INA můžeš nahrávat.
 4. Pokud špatně zapojíš MCP2515 CAN Bus Modul TJA1050 SPI esp32 vůbec nenaběhne.
 5. Když je vše OK tak se připoj na wifi MY_VOLVO a heslo je 12345678
 
-## Demo version
-
+## Demo version - ukazuje otáčky a venkovní teplotu. Pokud ti to bude fungovat můžes si stáhnout plnou verzi.
+<img src="demo.jpg" width="600">
 Free demo firmware:
 
 [Download demo .ino](demo.ino)
