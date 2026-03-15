@@ -10,7 +10,8 @@ Můžu si nastavit saze na 28g a v té chvíli začne led blikat. Znamená to pr
 Když nastavít teplotu na 210 tak při této teplote už startuje vypalování. Led kontrokla svítí dokud teplota neklesne pod 190°C
 Vysledoval jsem, že každý den cestou do práce a z práce mi to udělá 1g sazí při 60 ujetých kilometrech.
 
-
+První dvě orazovky jsou havní menu. Další dvě obrazovky je phone verze.
+<img src="10.png" width="600">
 
 Co budeme potřebovat.
 - Software
@@ -18,4 +19,17 @@ Co budeme potřebovat.
 
 - Hardware
 1. ESP32 super mini
-2. 
+2. Step down nastavitelný měnič s LM2596 DC-DC (Tady velký pozor. Nejdřív si nastavte na outputu 5V trimrem. Přijpoj si samotný měnič na zdroj 12V a nastav si 5.05V sleduj meřák na outputu. Jinak spálíš všechno co tam bude.)
+3. MCP2515 CAN Bus Modul TJA1050 SPI
+4. Diodu 1N4148
+5. Led diodu. Barvu si zvol sám.
+6. Odpory 10kOhm,18kOhm pro dělič napětí a 320Ohm pro ledku.
+7. Univerzální plošný spoj 50x70mm
+8. Kabel 3x1mm pro GND, CANH, CANL který se napojí zezadu na konektor OBD 2. Vodič 1mm pro 12V ze zapalovače.
+9. Pojitku 500mA a pojistkové lůžko.
+10. OBD konektor když chceš verzi plug and play.
+
+Schéma zapojení.
+Pro zkoužku si můžeš půjčit 12V přímo z OBD2 na pinu 16, ale protože je tam trvalé napětí, tak je lepší to zapojit na 12V ze zapalovače. Ten se zapne až po nastartování.
+<img src="schema.png" width="600">
+
