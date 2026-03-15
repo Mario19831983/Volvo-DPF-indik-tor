@@ -30,6 +30,10 @@ Co budeme potřebovat.
 10. OBD konektor když chceš verzi plug and play.
 
 Schéma zapojení.
+
 Pro zkoužku si můžeš půjčit 12V přímo z OBD2 na pinu 16, ale protože je tam trvalé napětí, tak je lepší to zapojit na 12V ze zapalovače. Ten se zapne až po nastartování.
 <img src="schema.png" width="600">
 
+Jak to vypadá u mě.
+
+<img src="04_bastl.jpg" width="600">
