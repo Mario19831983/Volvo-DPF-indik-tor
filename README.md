@@ -50,3 +50,9 @@ Jak to vypadá u mě. Ten microUSB je tam jen kabel, kdybych chtěl software akt
 Free demo firmware:
 
 [Download demo .ino](demo.ino)
+
+## Full version
+
+Full firmware with complete `.INO` source code is available here:
+
+➡ https://marekverse80.gumroad.com/l/qpyikp
