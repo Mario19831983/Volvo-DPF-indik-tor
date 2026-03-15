@@ -76,7 +76,7 @@ The **microUSB cable** is only used in case I want to update the firmware.
 2. Install library **ACAN2515.h** by Pierre Molinaro
 3. After opening the `.ino` file you can upload the firmware
 4. If the MCP2515 CAN Bus Module is wired incorrectly, the ESP32 will not boot
-5. When everything is working, connect to WiFi:
+5. When everything is working, connect to WiFi: MY_VOLVO password 12345678 and web browser http://192.168.4.1 
 ---
 
 # Demo version
@@ -147,7 +147,7 @@ Jak to vypadá u mě. Ten microUSB je tam jen kabel, kdybych chtěl software akt
 2. stáhni si knihovnu ACAN2515.h od Pierre Molinaro
 3. po vložení INA můžeš nahrávat.
 4. Pokud špatně zapojíš MCP2515 CAN Bus Modul TJA1050 SPI esp32 vůbec nenaběhne.
-5. Když je vše OK tak se připoj na wifi MY_VOLVO a heslo je 12345678
+5. Když je vše OK tak se připoj na wifi MY_VOLVO a heslo je 12345678. Do adresy dej http://192.168.4.1
 
 ## Demo version - ukazuje otáčky a venkovní teplotu. Pokud ti to bude fungovat můžes si stáhnout plnou verzi.
 <img src="demo.jpg" width="600">
